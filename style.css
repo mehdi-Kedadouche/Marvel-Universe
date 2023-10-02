@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200;0,300;0,400;1,200&family=Bangers&display=swap');
+
+/* Reset des styles de base du navigateur */
+html,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+body {
+    font-family: 'Asap', sans-serif;
+    font-family: 'Bangers', cursive;
+    background-image: url('images/fff.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000fd;
+    /* background: linear-gradient(184deg, rgba(0, 0, 0, 1) 0%, rgba(9, 77, 121, 1) 42%, rgba(255, 0, 95, 1) 100%); */
+
+    margin: 0;
+    padding: 0 12em 0 12em;
+    letter-spacing: 2px;
+}
+
+header {
+    height: 200x;
+    background-image: url('images/logo-marvel-studios-stan-lee.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+
+    color: white;
+    /* Couleur du texte */
+    padding: 100px;
+    /* Espacement intérieur du header */
+}
+
+
+
+img {
+    width: 100px;
+}
+
+
+
+/***** NAVBAR  *******/
+nav ul {
+    top: 10px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    background-color: #030303;
+    list-style: none;
+
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #CC0000;
+}
+
+/********** Menu Burger ******/
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #18429cd5;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+    text-align: center;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #00000094;
+}
+
+/* Active class */
+.sidenav.active {
+    left: 0;
+    z-index: 3;
+}
+
+/* Close btn */
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.burger-icon {
+    position: absolute;
+    left: 1em;
+
+    top: 8.5em;
+}
+
+.burger-icon span {
+
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: rgb(226, 19, 19);
+    margin: 10px 0px 0px 10px;
+    z-index: 2;
+}
+
+svg {
+    position: absolute;
+    background-color: rgb(226, 19, 19);
+    right: 1em;
+    top: 8.5em;
+    border-radius: 50%;
+}
+
+/* Styles pour la barre de recherche */
+.search-bar {
+    margin-left: 10em;
+
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 100px;
+    border: 2px solid #070707;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #9e1e1e;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: #e42b2b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style pour le bouton de recherche au survol */
+.search-bar button:hover {
+    background-color: #CC0000;
+}
+
+
+
+@media (min-width: 800px) {
+    .burger-icon span {
+        display: none;
+        /* cache le menu burger au  dessus de 800px */
+    }
+
+    svg {
+        display: none;
+    }
+
+
+}
+
+/* Media Query pour écrans de 800px de largeur ou moins */
+@media (max-width: 800px) {
+    nav ul {
+        display: none;
+        /* Cacher la liste des liens par défaut */
+    }
+
+    header {
+
+        top: 0;
+
+        z-index: 1;
+    }
+
+    .search-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .search-bar {
+        margin-left: 2em;
+
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    #villains {
+        flex-direction: column-reverse;
+        /* Inverser l'ordre des sections en dessous de 700px */
+    }
+
+    #characters {
+        flex-direction: column-reverse;
+        /* Inverser l'ordre des sections en dessous de 700px */
+    }
+
+    footer {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+
+#heroesPage {
+   
+    height: 43vh  !important;
+  
+ 
+}
+}
+
+@media (max-width: 1012px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #080808;
+
+    }
+
+    .search-bar {
+        margin-left: 3em;
+
+    }
+}
+
+
+
+/********* SECTION ********** Page INDEX*/
+#heroes {
+    color: #fff;
+    top: 0;
+    height: 66vh;
+    width: 100%;
+    background-image: url('images/marvel-avengers-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding-bottom: 0;
+
+}
+
+#heroes h2 {
+    color: #fff;
+
+    padding-top: 30px;
+    text-align: center;
+
+}
+
+#heroes p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+
+
+#villains {
+    display: flex;
+    background-color: #000000;
+    margin-top: 15px;
+}
+
+#villains .left {
+    flex: 1;
+    background-image: url('images/hd4k.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    min-height: 300px;
+}
+
+#villains .right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#villains .right h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* #villains {
+    display: flex;
+    align-items: center; 
+    background-color: #000000;
+    margin-top: 15px;
+  }
+  #villains img {
+    width: 100%;
+    height: auto;
+  }
+
+  #villains .left {
+    
+    
+    float: right;
+    background-image: url('images/hd4k.jpg');
+    background-repeat: no-repeat ;
+    background-position: center;
+    background-size: contain;
+  }
+
+  #villains .right {
+ 
+    
+    padding: 20px; 
+  } */
+
+
+#comics {
+    margin: 10px 0 0 10px;
+    float: right;
+    top: 0;
+    margin-top: 10px;
+}
+
+#movie {
+    margin: 10px 10px 0 0;
+}
+
+footer {
+    background-color: #070707;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/**********************************PAGE HEROS********************/
+
+/********* SECTION id="heroesPage" ********** Page HEROS*/
+
+#heroesPage {
+    color: #fff;
+    top: 0;
+    height: 66vh;
+    width: 100%;
+    background-image: url('images/nosheros.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding-bottom: 0;
+
+}
+
+#heroesPage h2 {
+    color: #fff;
+font-size: xx-large;
+    padding: 15px;
+    text-align: start;
+
+}
+
+#heroesPage span {
+    color:#e42b2b;
+
+
+}
+
+#heroesPage p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/********* SECTION CHARACTERS********** Page HEROS*/
+
+
+#characters {
+    display: flex;
+    background-color: #000000;
+    margin-top: 15px;
+}
+
+#characters .left {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    min-height: 300px;
+}
+
+#characters .right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#characters .right h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*SpiderMan*/
+section #SpiderMan {
+    background-image: url('images/spiderman.jpg');
+}
+.SpiderMan  {
+   color: rgb(25, 25, 241);
+}
+.SpiderMan span{ color: #CC0000;}
+
+/*IronMan*/
+section #IronMan {
+    background-image: url('images/ironMan.jpg');
+}
+.IronMan  {
+    color: rgb(214, 187, 30);
+ }
+ .IronMan span{ color: #CC0000;}
+
+ /*CaptainAmerica*/
+section #CaptainAmerica {
+    background-image: url('images/ca2.webp');
+}
+
+section #Hulk {
+    background-image: url('images/hulk2.webp');
+}
+
+section #AntMan {
+    background-image: url('images/antman.webp');
+}
+
+section #Thor {
+    background-image: url('images/thor1.webp');
+}

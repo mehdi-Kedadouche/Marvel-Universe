@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200;0,300;0,400;1,200&family=Bangers&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200;0,300;0,400;1,200&family=Bangers&family=Roboto+Condensed&display=swap');
 /* Reset des styles de base du navigateur */
-html,
-h1,
-h2,
-h3,
-p,
-ul,
-li {
+* {
     margin: 0;
     padding: 0;
     color: #fff;
@@ -42,10 +36,9 @@ header {
 }
 
 
-
-img {
-    width: 100px;
-}
+section img {
+    width: 200px;
+} 
 
 
 
@@ -203,12 +196,6 @@ svg {
         /* Cacher la liste des liens par défaut */
     }
 
-    header {
-
-        top: 0;
-
-        z-index: 1;
-    }
 
     .search-bar {
         display: none;
@@ -224,7 +211,7 @@ svg {
 
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
 
     #villains {
         flex-direction: column-reverse;
@@ -232,23 +219,20 @@ svg {
     }
 
     #characters {
-        flex-direction: column-reverse;
-        /* Inverser l'ordre des sections en dessous de 700px */
+        flex-direction: column;
+        /* Place la section right en dessous de la section gauche dessous de 700px */
     }
 
-    footer {
-        margin-top: 10px;
-    }
 }
 
 @media (max-width: 400px) {
 
-#heroesPage {
-   
-    height: 43vh  !important;
-  
- 
-}
+    #heroesPage {
+
+        height: 43vh !important;
+
+
+    }
 }
 
 @media (max-width: 1012px) {
@@ -331,43 +315,34 @@ svg {
     margin-bottom: 10px;
 }
 
-/* #villains {
-    display: flex;
-    align-items: center; 
-    background-color: #000000;
-    margin-top: 15px;
-  }
-  #villains img {
-    width: 100%;
-    height: auto;
-  }
-
-  #villains .left {
-    
-    
-    float: right;
-    background-image: url('images/hd4k.jpg');
-    background-repeat: no-repeat ;
-    background-position: center;
-    background-size: contain;
-  }
-
-  #villains .right {
- 
-    
-    padding: 20px; 
-  } */
-
 
 #comics {
+    width: 30%;
+    padding: 50px;
+    background-color: #000000;
     margin: 10px 0 0 10px;
     float: right;
-    top: 0;
-    margin-top: 10px;
+    top: 0; 
+}
+#comics p{
+    font-family: "Roboto Condensed";
+    margin: 20px 10px 20px 10px;
+    font-weight: bold;
 }
 
-#movie {
+.movie {
     margin: 10px 10px 0 0;
+    background-color: #a81e1e70;
+    padding: 10px;
+    width: 60%;
+}
+.movie p{
+    font-family: "Roboto Condensed";
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.movie img{
+    width: 45vw;
 }
 
 footer {
@@ -396,14 +371,14 @@ footer {
 
 #heroesPage h2 {
     color: #fff;
-font-size: xx-large;
+    font-size: xx-large;
     padding: 15px;
     text-align: start;
 
 }
 
 #heroesPage span {
-    color:#e42b2b;
+    color: #e42b2b;
 
 
 }
@@ -449,21 +424,29 @@ font-size: xx-large;
 section #SpiderMan {
     background-image: url('images/spiderman.jpg');
 }
-.SpiderMan  {
-   color: rgb(25, 25, 241);
+
+.SpiderMan {
+    color: rgb(25, 25, 241);
 }
-.SpiderMan span{ color: #CC0000;}
+
+.SpiderMan span {
+    color: #CC0000;
+}
 
 /*IronMan*/
 section #IronMan {
     background-image: url('images/ironMan.jpg');
 }
-.IronMan  {
-    color: rgb(214, 187, 30);
- }
- .IronMan span{ color: #CC0000;}
 
- /*CaptainAmerica*/
+.IronMan {
+    color: rgb(214, 187, 30);
+}
+
+.IronMan span {
+    color: #CC0000;
+}
+
+/*CaptainAmerica*/
 section #CaptainAmerica {
     background-image: url('images/ca2.webp');
 }
@@ -478,4 +461,186 @@ section #AntMan {
 
 section #Thor {
     background-image: url('images/thor1.webp');
+}
+
+
+/************ PAGE MOVIE***********************/
+
+#MoviesPage {
+    color: #fff;
+    top: 0;
+    height: 67vh;
+    width: 100%;
+    background-image: url('images/film4.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding-bottom: 0;
+
+}
+
+#MoviesPage h1 {
+    padding: 100px;
+    font-size: 70px;
+    letter-spacing: 4px;
+
+}
+
+@media screen and (max-width: 1390px) {
+
+    #MoviesPage h1 {
+        padding: 71px;
+
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    #MoviesPage h1 {
+        padding: 71px;
+        font-size: 49px;
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+
+    #MoviesPage h1 {
+        padding: 57px;
+
+    }
+
+    #MoviesPage {
+        height: 56vh;
+
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    #MoviesPage {
+        color: #fff;
+        top: 0;
+        height: 32vh;
+        width: 100%;
+        background-image: url('images/film4.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        padding-bottom: 0;
+
+    }
+
+    #MoviesPage h1 {
+        padding: 16px;
+        font-size: 40px;
+    }
+
+    .item {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    #MoviesPage h1 {
+        padding: 16px;
+        font-size: 35px;
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+
+    .item {
+        width: 80vw;
+    }
+
+}
+
+/*liste des films */
+
+#movie {
+    display: flex;
+    background-color: #000000;
+
+}
+
+#movie .left {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    min-height: 300px;
+}
+
+#movie .right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#movie .right h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+/* Section film*/
+
+/* section #Ironman {
+    background-image: url('images/Iron_Man_Official_Poster.webp');
+} */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* max-width: 1300px; */
+    margin: 70px auto 0;
+    background-color: #000000ad;
+    width: 100%;
+    padding-top: 10px;
+    padding: 0;
+    
+    margin: 15px 0 15px 0;
+}
+
+.item {
+    background-color: #050505;
+    width: 300px;
+    height: auto;
+    margin: 20px;
+
+}
+
+.item img {
+    width: 100%;
+    height: 50vh;
+}
+
+.item h2 {
+    text-align: center;
+    margin: 5px;
+
+}
+
+
+.container a {
+    list-style: none;
+    text-decoration: none;
+}
+@media screen and (max-width: 520px) {
+
+    .item {
+        width: 80vw;
+    }
+
 }

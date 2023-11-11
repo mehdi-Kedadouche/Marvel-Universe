@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <!-- Back to top button -->
+    <a id="button"></a>
     <div id="mySidenav" class="sidenav">
         <a id="closeBtn" href="#" class="close">&times;</a>
         <ul>
@@ -22,101 +24,156 @@
     </div>
 
 
-    
-        <header>
-            <a href="#" id="openBtn">
-                <span class="burger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
+
+    <header>
+        <a href="#" id="openBtn">
+            <span class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 50 50">
+            <path
+                d="M46.5 43.3l-11.4-11.4C38.1 27.6 40 23.4 40 18 40 9.2 31.8 2 23 2 14.2 2 7 9.2 7 18c0 8.8 7.2 16 16 16 5.4 0 9.6-1.9 13.9-5.9l11.4 11.4 2.1-2.1zM23 32C15.3 32 10 26.7 10 20S15.3 8 23 8s13 5.3 13 12-5.3 12-13 12z" />
+        </svg>
+
+    </header>
+    <nav>
+
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="pageHeros.html">Héros</a></li>
+            <li><a href="Movies.html">Movies</a></li>
+            <li><a href="#comics">Bandes déssinées</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Rechercher...">
+                <button>Rechercher</button>
+            </li>
+
+        </ul>
+
+    </nav>
+    <section id="MoviesPage">
+        <h1>Films <br><span style="color: #FF0000;">Marvel</span></h1>
+        <div class="hero-card">
+        </div>
+    </section>
+
+
+
+    <div class="container">
+        <div class="item"><a href="http://"><img src="images/iron.webp" alt="">
+                <h2>Iron Man</h2>
+            </a> </div>
+        <div class="item"><a href="index.html"><img src="images/Iron-Man-2-Image-1.jpg" alt="">
+                <h2>Iron Man 2</h2>
+            </a></div>
+        <div class="item"><a href="http://"><img src="images/Thor-Image-1.jpg" alt=""></a>
+            <h2>Thor</h2>
+        </div>
+        <div class="item"><a href="http://"><img src="images/Captain-America-First-Avenger-Image-1.jpg" alt="">
+                <h2>Captain America</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/affiche-avengers-LTHMDB.jpg" alt="">
+                <h2>Avengers</h2>
+            </a></div>
+        <div class="item"><a href="http://"><img src="images/The-Amazing-Spider-Man-Image-1.jpg" alt="">
+                <h2>Spider-Man</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/ironman3.jpeg" alt="">
+                <h2>Iron Man 3</h2>
+            </a></div>
+        <div class="item"><a href="http://"><img src="images/hulkk.webp" alt="">
+                <h2>L'Incroyable Hulk</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/thor-le-monde-des-tenebres-1-image.jpg" alt="">
+                <h2>Thor: Le monde des tenèbres</h2>
+            </a></div>
+        <div class="item"><a href="http://"><img src="images/captain-america-le-soldat-de-lhiver-1-image.jpg" alt="">
+                <h2>Captain America 2</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/avengers2.jpg" alt="">
+                <h2>Avengers 2</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/gdlg.jpg" alt="">
+                <h2>LES GARDIENS DE LA GALAXIE</h2>
+        </div></a>
+
+        <div class="item"><a href="http://"><img src="images/ant_man.jpg" alt="">
+                <h2>Ant-Man</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/captain_america_civil_war.jpg" alt="">
+                <h2>Captain America : Civil War</h2>
+            </a></div>
+        <div class="item"><a href="http://"><img src="images/doctor_strange.jpg" alt="">
+                <h2>Doctor strange</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/les_gardiens_de_la_galaxie_vol_2.jpg" alt="">
+                <h2> Les Gardiens de la galaxie Vol. 2</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/spider_man_homecoming.jpg" alt="">
+                <h2>Spider-Man: Homecoming</h2>
             </a>
-            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 50 50">
-                <path
-                    d="M46.5 43.3l-11.4-11.4C38.1 27.6 40 23.4 40 18 40 9.2 31.8 2 23 2 14.2 2 7 9.2 7 18c0 8.8 7.2 16 16 16 5.4 0 9.6-1.9 13.9-5.9l11.4 11.4 2.1-2.1zM23 32C15.3 32 10 26.7 10 20S15.3 8 23 8s13 5.3 13 12-5.3 12-13 12z" />
-            </svg>
+        </div>
 
-        </header>
-        <nav>
-
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="pageHeros.html">Héros</a></li>
-                <li><a href="Movies.html">Movies</a></li>
-                <li><a href="#comics">Bandes déssinées</a></li>
-                <li class="search-bar">
-                    <input type="text" placeholder="Rechercher...">
-                    <button>Rechercher</button>
-                </li>
-
-            </ul>
-
-        </nav>
-        <section id="MoviesPage">
-            <h1>Films <br><span style="color: #FF0000;">Marvel</span></h1>
-            <div class="hero-card">
-            </div>
-        </section>
+        <div class="item"><a href="http://"><img src="images/thor_ragnarok.jpg" alt="">
+                <h2>Thor: Ragnarok</h2>
+            </a></div>
+        <div class="item"><a href="http://"><img src="images/black_panther.jpg" alt="">
+                <h2>Black Panther</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/avengers_infinity_war.jpg" alt="">
+                <h2>Avengers: Infinity War</h2>
+            </a> </div>
 
 
 
-        <div class="container">
-            <div class="item"><a href="http://"><img src="images/iron.webp" alt="">
-                    <h2>Iron Man</h2>
-                </a> </div>
-            <div class="item"><a href="index.html"><img src="images/Iron-Man-2-Image-1.jpg" alt="">
-                    <h2>Iron Man 2</h2>
-                </a></div>
-            <div class="item"><a href="http://"><img src="images/Thor-Image-1.jpg" alt=""></a>
-                <h2>Thor</h2>
-            </div>
-            <div class="item"><a href="http://"><img src="images/Captain-America-First-Avenger-Image-1.jpg" alt="">
-                    <h2>Captain America</h2>
-                </a> </div>
-            <div class="item"><a href="http://"><img src="images/affiche-avengers-LTHMDB.jpg" alt="">
-                    <h2>Avengers</h2>
-                </a></div>
-            <div class="item"><a href="http://"><img src="images/The-Amazing-Spider-Man-Image-1.jpg" alt="">
-                    <h2>Spider-Man</h2>
-                </a> </div>
-            <div class="item"><a href="http://"><img src="images/ironman3.jpeg" alt="">
-                    <h2>Iron Man 3</h2>
-                </a></div>
-            <div class="item"><a href="http://"><img src="images/hulkk.webp" alt="">
-                    <h2>L'Incroyable Hulk</h2>
-                </a> </div>
-            <div class="item"><a href="http://"><img src="images/thor-le-monde-des-tenebres-1-image.jpg" alt="">
-                    <h2>Thor: Le monde des tenèbres</h2>
-                </a></div>
-            <div class="item"><a href="http://"><img src="images/captain-america-le-soldat-de-lhiver-1-image.jpg" alt="">
-                    <h2>Captain America 2</h2>
-                </a> </div>
-            <div class="item"><a href="http://"><img src="images/avengers2.jpg" alt="">
-                    <h2>Avengers 2</h2>
-                </a> </div>
-            <div class="item"><a href="http://"><img src="images/gdlg.jpg" alt="">
-                    <h2>LES GARDIENS DE LA GALAXIE</h2>
-            </div></a>
+        <div class="item"><a href="http://"><img src="images/ant_man_et_la_guepe.jpg" alt="">
+                <h2>Ant-Man et la Guêpe</h2>
+            </a></div>
+        <div class="item"><a href="http://"><img src="images/captain_marvel.webp" alt="">
+                <h2>Captain Marvel</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/avengers_endgame.jpg" alt="">
+                <h2>Avengers: Endgame</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/spider_man_far_from_home.jpg" alt="">
+                <h2>Spider-Man: Far From Home</h2>
+            </a>
+        </div>
+
+        <div class="item"><a href="http://"><img src="images/black_widow.jpg" alt="">
+                <h2>Black Widow</h2>
+            </a></div>
+        <div class="item"><a href="http://"><img src="images/shang_chi_et_la_legende_des_dix_anneaux.jpg" alt="">
+                <h2>Shang-Chi</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/les_eternels.png" alt="">
+                <h2>Les Éternels</h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/spider_man_no_way_home.png" alt="">
+                <h2>Spider-Man: No Way Home</h2>
+            </a>
+        </div>
+
+        <div class="item"><a href="http://"><img src="images/doctor_strange_in_the_multiverse_of_madness.png" alt="">
+                <h2>Doctor Strange in the Multiverse of Madness
+                </h2>
+            </a> </div>
+        <div class="item"><a href="http://"><img src="images/les_gardiens_de_la_galaxie_vol_3.webp" alt="">
+                <h2>Les Gardiens de la galaxie Vol. 3</h2>
+            </a>
         </div>
 
 
-        <footer>
-            <p>&copy; 2023 Univers Marvel - Tous droits réservés</p>
-        </footer>
+    </div>
 
-        <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2023 Univers Marvel - Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

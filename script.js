@@ -18,3 +18,34 @@ document.addEventListener("DOMContentLoaded", function () {
     sidenav.classList.remove("active");
   }
 });
+
+
+/**boutton remonter  */
+
+// JavaScript pour remonter en haut de page
+// Sélection de l'élément button
+var btn = document.getElementById('button');
+
+// Ajout d'un gestionnaire d'événement scroll à la fenêtre
+window.addEventListener('scroll', function() {
+  // Vérification de la position de défilement de la fenêtre
+  if (window.scrollY > 300) {
+    // Ajout de la classe 'show' si la position de défilement est supérieure à 300
+    btn.classList.add('show');
+  } else {
+    // Retrait de la classe 'show' sinon
+    btn.classList.remove('show');
+  }
+});
+
+// Ajout d'un gestionnaire d'événement click au bouton
+btn.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  // Animation du défilement vers le haut
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+

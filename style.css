@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200;0,300;0,400;1,200&family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200;0,300;0,400;1,200&family=Bangers&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200;0,300;0,400;1,200&family=Bangers&family=Carter+One&family=Roboto+Condensed&display=swap');
 /* Reset des styles de base du navigateur */
 * {
     margin: 0;
@@ -300,13 +301,7 @@ svg {
 }
 
 #villains .right {
-    flex: 1;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
 }
 
 #villains .right h2 {
@@ -316,32 +311,38 @@ svg {
 
 
 #comics {
-    width: 30%;
-    padding: 50px;
-    background-color: #000000;
-    margin: 10px 0 0 10px;
+    width: 56%;
+    background-color:#002658d8;
+    margin: 10px;
     float: right;
-    top: 0; 
+    height: 100%;
+}
+#comics img {
+    width: 100%;
+    height: auto;
 }
 #comics p{
-    font-family: "Roboto Condensed";
+    font-family: 'Anton', sans-serif; 
     margin: 20px 10px 20px 10px;
     font-weight: bold;
 }
 
+
 .movie {
-    margin: 10px 10px 0 0;
-    background-color: #a81e1e70;
-    padding: 10px;
-    width: 60%;
+    margin: 10px ;
+    background-color: #a81e1ef2;
+    padding: 2px;
+    width: 40%;
 }
-.movie p{
-    font-family: "Roboto Condensed";
-    letter-spacing: 1px;
+.movie h2,
+#comics h2 {
+    text-align: center;
+    letter-spacing: 3px;
     font-weight: bold;
+    padding: 10px;
 }
-.movie img{
-    width: 45vw;
+.movie  img{
+    width: 100%;
 }
 
 footer {

@@ -225,13 +225,32 @@ svg {
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
     #heroesPage {
 
         height: 43vh !important;
 
 
+    }
+
+    #MoviesPage h1 {
+        padding: 16px;
+        font-size: 35px;
+    }
+    .flex-right {
+        display: block  !important;
+        width: 100vw  !important;
+    }
+    .flex-container {
+        display: block  !important;
+
+          width: 100%  !important;
+    }
+
+
+    #characters .right h2 {
+        font-size: 5vh !important;
     }
 }
 
@@ -309,7 +328,92 @@ svg {
     margin-bottom: 10px;
 }
 
+body {
+    margin: 0; /* Supprime les marges par défaut du corps de la page */
+}
 
+.flex-container {
+    display: flex;
+    width: 100%; /* Le conteneur occupe la largeur totale */
+}
+
+.flex-right {
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+   
+}
+
+.movie {
+    margin-right: 5px;}
+
+.movie img{
+    width: 100%;
+    height: auto;
+}
+
+
+#comics,
+#bd {
+    /* flex: 1;  */
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+#comics {
+    background-color: #002658d8;
+    overflow: hidden;
+}
+
+#comics img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#comics p {
+    font-family: 'Anton', sans-serif;
+    margin: 20px 10px;
+    font-weight: bold;
+}
+
+#bd {
+    background-color: #62a03491;
+    overflow: hidden;
+    margin-top: 3px;
+}
+
+#bd img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#bd p {
+    font-family: 'Anton', sans-serif;
+    margin: 20px 10px;
+    font-weight: bold;
+}
+
+.movie {
+    background-color: #a81e1ef2;
+    padding: 2px;
+}
+
+.movie h2,
+#comics h2,
+#bd h2 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+/* Ajoutez le reste de votre style pour #movie, #comics et #bd ici */
+
+
+/* 
 #comics {
     width: 56%;
     background-color:#002658d8;
@@ -327,6 +431,22 @@ svg {
     font-weight: bold;
 }
 
+#bd {
+    width: 56%;
+    background-color:#002658d8;
+    margin: 10px;
+    float: right;
+    height: 100%;
+}
+#bd img {
+    width: 100%;
+    height: auto;
+}
+#bd p{
+    font-family: 'Anton', sans-serif; 
+    margin: 20px 10px 20px 10px;
+    font-weight: bold;
+}
 
 .movie {
     margin: 10px ;
@@ -335,7 +455,8 @@ svg {
     width: 40%;
 }
 .movie h2,
-#comics h2 {
+#comics h2,
+#bd h2 {
     text-align: center;
     letter-spacing: 3px;
     font-weight: bold;
@@ -343,13 +464,14 @@ svg {
 }
 .movie  img{
     width: 100%;
-}
+} */
 
 footer {
     background-color: #070707;
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    margin-top: 10px;
 }
 
 /**********************************PAGE HEROS********************/
@@ -361,7 +483,7 @@ footer {
     top: 0;
     height: 66vh;
     width: 100%;
-    background-image: url('images/nosheros.jpg');
+    background-image: url('images/avengers-solo-dos.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -370,11 +492,11 @@ footer {
 }
 
 #heroesPage h2 {
-    color: #fff;
-    font-size: xx-large;
-    padding: 15px;
+    color: #f5f5f5;
+    font-size: 50px;
+    padding: 20px;
     text-align: start;
-
+    text-shadow: 5px 5px 4px #333;
 }
 
 #heroesPage span {
@@ -420,6 +542,8 @@ footer {
 #characters .right h2 {
     text-align: center;
     margin-bottom: 10px;
+    text-shadow: 5px 5px 4px #333;
+    font-size: 5vh;
 }
 
 /*SpiderMan*/
@@ -473,7 +597,7 @@ section #Thor {
     top: 0;
     height: 67vh;
     width: 100%;
-    background-image: url('images/film4.jpg');
+    background-image: url('images/movie.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -485,7 +609,7 @@ section #Thor {
     padding: 100px;
     font-size: 70px;
     letter-spacing: 4px;
-
+    text-shadow: 9px 6px 7px #000;
 }
 
 @media screen and (max-width: 1390px) {
@@ -518,6 +642,25 @@ section #Thor {
 
     }
 
+    .flex-right {
+     
+        
+        width: 100vw;
+    }
+    .flex-right {
+     
+        flex-direction: column;
+        width: 80vw;
+    }
+    #heroesPage {
+    height: 48vh;
+    }
+  
+
+#characters .right h2 {
+
+    font-size: 3vh;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -545,22 +688,8 @@ section #Thor {
     }
 }
 
-@media screen and (max-width: 400px) {
 
-    #MoviesPage h1 {
-        padding: 16px;
-        font-size: 35px;
-    }
 
-}
-
-@media screen and (max-width: 520px) {
-
-    .item {
-        width: 80vw;
-    }
-
-}
 
 /*liste des films */
 
@@ -715,3 +844,28 @@ section #Thor {
     }
   }
   
+
+
+  /* PAGE BANDE DESSINE  */
+
+  #bdPage {
+    color: #fff;
+    top: 0;
+    height: 66vh;
+    width: 100%;
+    background-image: url('images/bd3.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding-bottom: 0;
+
+}
+
+#bdPage h2 {
+    color: #000000;
+    font-size: 63px;
+    text-align: center;
+    padding: 30px;
+    /* border: 2px solid #333; */
+    text-shadow: 6px 5px 6px #fff0f0;
+}

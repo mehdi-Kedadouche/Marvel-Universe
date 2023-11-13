@@ -1,3 +1,5 @@
+/*menu burger*/
+
 document.addEventListener("DOMContentLoaded", function () {
   // Récupérer les éléments du DOM
   var sidenav = document.getElementById("mySidenav");

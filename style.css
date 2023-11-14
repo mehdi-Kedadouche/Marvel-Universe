@@ -50,6 +50,7 @@ nav ul {
     background-color: #030303;
     list-style: none;
 
+    
 }
 
 nav ul li {
@@ -63,11 +64,42 @@ nav ul li a {
     font-size: 20px;
     font-weight: bold;
     transition: color 0.3s;
+
+    background-image: linear-gradient(
+    to right,
+     #CC0000,
+     #CC0000 50%,
+    #fcfcfc 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
 }
 
 nav a:hover {
+    background-position: 0;
     color: #CC0000;
 }
+
+nav a:before {
+    content: '';
+    background:  #CC0000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+nav a:hover::before {
+    width:100%;
+  }
 
 /********** Menu Burger ******/
 
@@ -248,10 +280,19 @@ svg {
           width: 100%  !important;
     }
 
-
+.container{     background-color: #00000078 !important;}
     #characters .right h2 {
         font-size: 5vh !important;
     }
+    .item{box-shadow: rgb(255 255 255 / 48%) 0px 0px 15px 6px !important; }
+
+    #bdPage h2 {
+        font-size: 45px !important;
+        text-align: center;
+        padding: 21px !important;
+    }
+    #bdPage {
+        height: 39vh !important;}
 }
 
 @media (max-width: 1012px) {
@@ -638,7 +679,7 @@ section #Thor {
     }
 
     #MoviesPage {
-        height: 56vh;
+        height: 38vh;
 
     }
 
@@ -655,7 +696,7 @@ section #Thor {
     #heroesPage {
     height: 48vh;
     }
-  
+  .item{     width: 333px !important; }
 
 #characters .right h2 {
 
@@ -737,8 +778,8 @@ section #Thor {
     /* max-width: 1300px; */
     background-color: #08207678;
     width: 100%;
-    padding-top: 10px;
-    padding: 0;
+    padding: 15px 0 15px 0;
+   
 }
 
 .item {
@@ -752,7 +793,10 @@ section #Thor {
     border-top-right-radius: 25px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    box-shadow: rgba(180, 177, 177, 0.479) 0px 5px 15px; 
+    /* box-shadow: rgba(180, 177, 177, 0.479) 0px 5px 15px;  */
+    box-shadow: rgb(255 255 255 / 48%) 0px 0px 15px 6px !important;
+    position: relative; /* Ajoutez une position relative pour placer l'effet de zoom */
+    overflow: hidden; /* Cache le dépassement d'image */
 }
 
 .item img {
@@ -761,8 +805,12 @@ section #Thor {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-top: 5px;
+    transition: transform 0.1s ease-in-out; 
 }
 
+.item:hover  {
+    transform: scale(1.1); /* Agrandit l'image de 10% au survol */
+}
 .item h2 {
     text-align: center;
     margin: 2px;

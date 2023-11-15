@@ -779,7 +779,7 @@ section #Thor {
     background-color: #08207678;
     width: 100%;
     padding: 15px 0 15px 0;
-   
+
 }
 
 .item {
@@ -813,7 +813,7 @@ section #Thor {
 }
 .item h2 {
     text-align: center;
-    margin: 2px;
+    padding: 5px;
 
 }
 

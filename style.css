@@ -1,0 +1,919 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200;0,300;0,400;1,200&family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200;0,300;0,400;1,200&family=Bangers&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,200;0,300;0,400;1,200&family=Bangers&family=Carter+One&family=Roboto+Condensed&display=swap');
+/* Reset des styles de base du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+body {
+    font-family: 'Asap', sans-serif;
+    font-family: 'Bangers', cursive;
+    /* background-image: url('images/fff.png'); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-color: #000000fd;
+    /* background: linear-gradient(184deg, rgba(0, 0, 0, 1) 0%, rgba(9, 77, 121, 1) 42%, rgba(255, 0, 95, 1) 100%); */
+    background: linear-gradient(45deg, #ff0000, #000000, #000000, #ff0000);    padding: 0 12em 0 12em;
+    letter-spacing: 2px;
+}
+
+header {
+    height: 200x;
+    background-image: url('images/logo-marvel-studios-stan-lee.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+
+    color: white;
+    /* Couleur du texte */
+    padding: 100px;
+    /* Espacement intérieur du header */
+}
+
+
+section img {
+    width: 200px;
+} 
+
+
+
+/***** NAVBAR  *******/
+nav ul {
+    top: 10px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    background-color: #030303;
+    list-style: none;
+
+    
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+
+    background-image: linear-gradient(
+    to right,
+     #CC0000,
+     #CC0000 50%,
+    #fcfcfc 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background-position: 0;
+    color: #CC0000;
+}
+
+nav a:before {
+    content: '';
+    background:  #CC0000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+nav a:hover::before {
+    width:100%;
+  }
+
+/********** Menu Burger ******/
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #18429cd5;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+    text-align: center;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #00000094;
+}
+
+/* Active class */
+.sidenav.active {
+    left: 0;
+    z-index: 3;
+}
+
+/* Close btn */
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.burger-icon {
+    position: absolute;
+    left: 1em;
+
+    top: 8.5em;
+}
+
+.burger-icon span {
+
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: rgb(226, 19, 19);
+    margin: 10px 0px 0px 10px;
+    z-index: 2;
+}
+
+svg {
+    position: absolute;
+    background-color: rgb(226, 19, 19);
+    right: 1em;
+    top: 8.5em;
+    border-radius: 50%;
+}
+
+/* Styles pour la barre de recherche */
+.search-bar {
+    margin-left: 10em;
+
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 100px;
+    border: 2px solid #070707;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #9e1e1e;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: #e42b2b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style pour le bouton de recherche au survol */
+.search-bar button:hover {
+    background-color: #CC0000;
+}
+
+
+
+@media (min-width: 800px) {
+    .burger-icon span {
+        display: none;
+        /* cache le menu burger au  dessus de 800px */
+    }
+
+    svg {
+        display: none;
+    }
+
+
+}
+
+/* Media Query pour écrans de 800px de largeur ou moins */
+@media (max-width: 800px) {
+    nav ul {
+        display: none;
+        /* Cacher la liste des liens par défaut */
+    }
+
+
+    .search-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .search-bar {
+        margin-left: 2em;
+
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    #villains {
+        flex-direction: column-reverse;
+        /* Inverser l'ordre des sections en dessous de 700px */
+    }
+
+    #characters {
+        flex-direction: column;
+        /* Place la section right en dessous de la section gauche dessous de 700px */
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    #heroesPage {
+
+        height: 43vh !important;
+
+
+    }
+
+    #MoviesPage h1 {
+        padding: 16px;
+        font-size: 35px;
+    }
+    .flex-right {
+        display: block  !important;
+        width: 100vw  !important;
+    }
+    .flex-container {
+        display: block  !important;
+
+          width: 100%  !important;
+    }
+
+.container{     background-color: #00000078 !important;}
+    #characters .right h2 {
+        font-size: 5vh !important;
+    }
+    .item{box-shadow: rgb(255 255 255 / 48%) 0px 0px 15px 6px !important; }
+
+    #bdPage h2 {
+        font-size: 45px !important;
+        text-align: center;
+        padding: 21px !important;
+    }
+    #bdPage {
+        height: 39vh !important;}
+}
+
+@media (max-width: 1012px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #080808;
+
+    }
+
+    .search-bar {
+        margin-left: 3em;
+
+    }
+}
+
+
+
+/********* SECTION ********** Page INDEX*/
+#heroes {
+    color: #fff;
+    top: 0;
+    height: 66vh;
+    width: 100%;
+    background-image: url('images/marvel-avengers-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding-bottom: 0;
+
+}
+
+#heroes h2 {
+    color: #fff;
+
+    padding-top: 30px;
+    text-align: center;
+
+}
+
+#heroes p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+
+
+#villains {
+    display: flex;
+    background-color: #000000;
+    margin-top: 15px;
+}
+
+#villains .left {
+    flex: 1;
+    background-image: url('images/hd4k.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    min-height: 300px;
+}
+
+#villains .right {
+    padding: 20px;
+}
+
+#villains .right h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+body {
+    margin: 0; /* Supprime les marges par défaut du corps de la page */
+}
+
+.flex-container {
+    display: flex;
+    width: 100%; /* Le conteneur occupe la largeur totale */
+}
+
+.flex-right {
+    display: flex;
+    flex-direction: column;
+    width: 55vw;
+   
+}
+
+.movie {
+    margin-right: 5px;}
+
+.movie img{
+    width: 100%;
+    height: auto;
+}
+
+
+#comics,
+#bd {
+    /* flex: 1;  */
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+#comics {
+    background-color: #002658d8;
+    overflow: hidden;
+}
+
+#comics img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#comics p {
+    font-family: 'Anton', sans-serif;
+    margin: 20px 10px;
+    font-weight: bold;
+}
+
+#bd {
+    background-color: #62a03491;
+    overflow: hidden;
+    margin-top: 3px;
+}
+
+#bd img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#bd p {
+    font-family: 'Anton', sans-serif;
+    margin: 20px 10px;
+    font-weight: bold;
+}
+
+.movie {
+    background-color: #a81e1ef2;
+    padding: 2px;
+}
+
+.movie h2,
+#comics h2,
+#bd h2 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+/* Ajoutez le reste de votre style pour #movie, #comics et #bd ici */
+
+
+/* 
+#comics {
+    width: 56%;
+    background-color:#002658d8;
+    margin: 10px;
+    float: right;
+    height: 100%;
+}
+#comics img {
+    width: 100%;
+    height: auto;
+}
+#comics p{
+    font-family: 'Anton', sans-serif; 
+    margin: 20px 10px 20px 10px;
+    font-weight: bold;
+}
+
+#bd {
+    width: 56%;
+    background-color:#002658d8;
+    margin: 10px;
+    float: right;
+    height: 100%;
+}
+#bd img {
+    width: 100%;
+    height: auto;
+}
+#bd p{
+    font-family: 'Anton', sans-serif; 
+    margin: 20px 10px 20px 10px;
+    font-weight: bold;
+}
+
+.movie {
+    margin: 10px ;
+    background-color: #a81e1ef2;
+    padding: 2px;
+    width: 40%;
+}
+.movie h2,
+#comics h2,
+#bd h2 {
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding: 10px;
+}
+.movie  img{
+    width: 100%;
+} */
+
+footer {
+    background-color: #070707;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+/**********************************PAGE HEROS********************/
+
+/********* SECTION id="heroesPage" ********** Page HEROS*/
+
+#heroesPage {
+    color: #fff;
+    top: 0;
+    height: 66vh;
+    width: 100%;
+    background-image: url('images/avengers-solo-dos.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding-bottom: 0;
+
+}
+
+#heroesPage h2 {
+    color: #f5f5f5;
+    font-size: 50px;
+    padding: 20px;
+    text-align: start;
+    text-shadow: 5px 5px 4px #333;
+}
+
+#heroesPage span {
+    color: #e42b2b;
+
+
+}
+
+#heroesPage p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+/********* SECTION CHARACTERS********** Page HEROS*/
+
+
+#characters {
+    display: flex;
+    background-color: #3c3c3c59;
+    margin-top: 15px;
+    box-shadow: rgb(149 13 13 / 45%) 0px -50px 36px -28px inset;
+}
+
+
+#characters .left {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    min-height: 300px;
+}
+
+#characters .right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#characters .right h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 5px 5px 4px #333;
+    font-size: 5vh;
+}
+
+/*SpiderMan*/
+section #SpiderMan {
+    background-image: url('images/spiderman.jpg');
+}
+
+.SpiderMan {
+    color: rgb(25, 25, 241);
+}
+
+.SpiderMan span {
+    color: #CC0000;
+}
+
+/*IronMan*/
+section #IronMan {
+    background-image: url('images/ironMan.jpg');
+}
+
+.IronMan {
+    color: rgb(214, 187, 30);
+}
+
+.IronMan span {
+    color: #CC0000;
+}
+
+/*CaptainAmerica*/
+section #CaptainAmerica {
+    background-image: url('images/ca2.webp');
+}
+
+section #Hulk {
+    background-image: url('images/hulk2.webp');
+}
+
+section #AntMan {
+    background-image: url('images/antman.webp');
+}
+
+section #Thor {
+    background-image: url('images/thor1.webp');
+}
+
+
+/************ PAGE MOVIE***********************/
+
+#MoviesPage {
+    color: #fff;
+    top: 0;
+    height: 67vh;
+    width: 100%;
+    background-image: url('images/movie.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding-bottom: 0;
+
+}
+
+#MoviesPage h1 {
+    padding: 100px;
+    font-size: 70px;
+    letter-spacing: 4px;
+    text-shadow: 9px 6px 7px #000;
+}
+
+@media screen and (max-width: 1390px) {
+
+    #MoviesPage h1 {
+        padding: 71px;
+
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    #MoviesPage h1 {
+        padding: 71px;
+        font-size: 49px;
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+
+    #MoviesPage h1 {
+        padding: 57px;
+
+    }
+
+    #MoviesPage {
+        height: 38vh;
+
+    }
+
+    .flex-right {
+     
+        
+        width: 100vw;
+    }
+    .flex-right {
+     
+        flex-direction: column;
+        width: 80vw;
+    }
+    #heroesPage {
+    height: 48vh;
+    }
+  .item{     width: 333px !important; }
+
+#characters .right h2 {
+
+    font-size: 3vh;
+}
+}
+
+@media screen and (max-width: 600px) {
+
+    #MoviesPage {
+        color: #fff;
+        top: 0;
+        height: 32vh;
+        width: 100%;
+        background-image: url('images/film4.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        padding-bottom: 0;
+
+    }
+
+    #MoviesPage h1 {
+        padding: 16px;
+        font-size: 40px;
+    }
+
+    .item {
+        width: 80vw;
+    }
+}
+
+
+
+
+/*liste des films */
+
+#movie {
+    display: flex;
+    background-color: #000000;
+
+}
+
+#movie .left {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    min-height: 300px;
+}
+
+#movie .right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#movie .right h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+/* Section film*/
+
+/* section #Ironman {
+    background-image: url('images/Iron_Man_Official_Poster.webp');
+} */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* max-width: 1300px; */
+    background-color: #08207678;
+    width: 100%;
+    padding: 15px 0 15px 0;
+
+}
+
+.item {
+    background-color: #000000fb;
+    width: 300px;
+    height: auto;
+    margin: 20px;
+    opacity: 1;
+    transition: all 0.4s ease-in-out 0s;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    /* box-shadow: rgba(180, 177, 177, 0.479) 0px 5px 15px;  */
+    box-shadow: rgb(255 255 255 / 48%) 0px 0px 15px 6px !important;
+    position: relative; /* Ajoutez une position relative pour placer l'effet de zoom */
+    overflow: hidden; /* Cache le dépassement d'image */
+}
+
+.item img {
+    width: 100%;
+    height: 50vh;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top: 5px;
+    transition: transform 0.1s ease-in-out; 
+}
+
+.item:hover  {
+    transform: scale(1.1); /* Agrandit l'image de 10% au survol */
+}
+.item h2 {
+    text-align: center;
+    padding: 5px;
+
+}
+
+
+.container a {
+    list-style: none;
+    text-decoration: none;
+}
+@media screen and (max-width: 520px) {
+
+    .item {
+        width: 80vw;
+    }
+
+}
+
+/**boutton remonter */
+
+/* Vos styles CSS ici */
+#button {
+    display: inline-block;
+    background-color: #0e39adc9;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  
+  #button::before {
+    content:  '\25B2'; /* Code Unicode pour une flèche vers le haut */
+    font-size: 2em;
+    font-weight: bold;
+    /* margin-right: 3px; */
+  }
+  
+  #button::after {
+   
+    font-family: FontAwesome;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 4em;
+    line-height: 50px;
+    color: #fff;
+  }
+  
+  #button:hover {
+    cursor: pointer;
+    background-color: #b61919c4;
+  }
+  
+  #button:active {
+    background-color: #555;
+  }
+  
+  #button.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Styles for the content section */
+  
+
+  
+  @media (min-width: 500px) {
+
+    #button {
+      margin: 30px;
+    }
+  }
+  
+
+
+  /* PAGE BANDE DESSINE  */
+
+  #bdPage {
+    color: #fff;
+    top: 0;
+    height: 66vh;
+    width: 100%;
+    background-image: url('images/bd3.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    padding-bottom: 0;
+
+}
+
+#bdPage h2 {
+    color: #000000;
+    font-size: 63px;
+    text-align: center;
+    padding: 30px;
+    /* border: 2px solid #333; */
+    text-shadow: 6px 5px 6px #fff0f0;
+}

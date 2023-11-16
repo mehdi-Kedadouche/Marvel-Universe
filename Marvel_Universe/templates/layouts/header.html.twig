@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel&Co</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">&times;</a>
+        <ul>
+            <li><a href="{{ path('home') }}">Accueil</a></li>
+            <li><a href="{{ path('heros') }}">Héros</a></li>
+            <li><a href="{{ path('Movies') }}">Movies</a></li>
+            <li><a href="{{ path('comics') }}">Bandes dessinées</a></li>
+        </ul>
+
+    </div>
+
+
+
+    <header>
+        <a href="#" id="openBtn">
+            <span class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 50 50">
+            <path
+                d="M46.5 43.3l-11.4-11.4C38.1 27.6 40 23.4 40 18 40 9.2 31.8 2 23 2 14.2 2 7 9.2 7 18c0 8.8 7.2 16 16 16 5.4 0 9.6-1.9 13.9-5.9l11.4 11.4 2.1-2.1zM23 32C15.3 32 10 26.7 10 20S15.3 8 23 8s13 5.3 13 12-5.3 12-13 12z" />
+        </svg>
+
+    </header>
+    <nav>
+
+        <ul>
+            <li><a href="{{ path('home') }}">Accueil</a></li>
+            <li><a href="{{ path('heros') }}">Héros</a></li>
+            <li><a href="{{ path('Movies') }}">Movies</a></li>
+            <li><a href="{{ path('comics') }}">Bandes déssinées</a></li>
+            <li class="search-bar">
+                <input type="text" placeholder="Rechercher...">
+                <button>Rechercher</button>
+            </li>
+
+        </ul>
+
+    </nav>

@@ -1,0 +1,15 @@
+{% include 'layouts/header.html.twig' %}
+
+
+{% if hero %}
+    <div class="hero-details">
+        <img src="{{ asset('images/' ~ hero.picture) }}" alt="{{ hero.name }}">
+        <h1 class="{{ hero.classe }}">{{ hero.name }}</h1>
+        <p class="real-name"><span>Nom d'origine: </span> {{ hero.OrigineName }}</p>
+        <p class="description">{{ hero.description }}</p>
+        <p class="creation-date"><span>Date de création:</span> {{ hero.Creation }}</p>
+        <p class="powers"><span>Pouvoirs:</span> {{ hero.powers }}</p>
+    </div>
+{% endif %}
+
+{% include 'layouts/footer.html.twig' %}

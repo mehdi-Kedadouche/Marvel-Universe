@@ -8,21 +8,19 @@
         </section>
 
 
-
+{% for hero in heros %}
+    <a href="{{ path('detail_hero', {'id': hero.id}) }}">
         <section id="characters">
-            <section class="left" id="SpiderMan"></section>
+            <section class="left" id="{{ hero.classe }}"></section>
 
             <section class="right">
-                <h2 class="SpiderMan">Spider-<span>Man</span></h2>
-                <p>Spider-Man, alias Peter Parker, est un adolescent ordinaire doté de pouvoirs extraordinaires. Après
-                    avoir été mordu par une araignée radioactive, il acquiert une force surhumaine, des réflexes
-                    aiguisés et la capacité de grimper aux murs. Cependant, avec de grands pouvoirs vient une grande
-                    responsabilité, et Peter Parker décide d'utiliser ses dons pour combattre le crime et protéger les
-                    habitants de la ville de New York. </p>
+                <h1 class="{{ hero.classe }}">{{ hero.name }}</h1>
+                <p>{{ hero.resume }}</p>
             </section>
         </section>
-
-        <section id="characters">
+    </a>
+{% endfor %}
+        {# <section id="characters">
             <section class="left" id="IronMan"></section>
 
             <section class="right">
@@ -93,7 +91,7 @@
                     extraterrestres et interdimensionnelles. Son caractère puissant, son sens de l'honneur et son sens
                     du devoir en font un personnage emblématique de l'univers Marvel.</p>
             </section>
-        </section>
+        </section> #}
 
 
 

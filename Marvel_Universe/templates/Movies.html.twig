@@ -6,13 +6,17 @@
         </div>
     </section>
 
-
-
-    <div class="container">
-        <div class="item"><a href="http://"><img src="images/iron.webp" alt="">
-                <h2>Iron Man</h2>
+ <div class="container">
+{% for movie in movies %}
+   
+        <div class="item"><a href="{{ path('detail_movie', {'id': movie.id}) }}"> <img src="{{ asset('images/' ~ movie.poster) }}" alt="{{ movie.title }}">
+                <h2>{{ movie.title }}</h2>
             </a> </div>
-        <div class="item"><a href="index.html"><img src="images/Iron-Man-2-Image-1.jpg" alt="">
+             
+                         {% endfor %}  
+            
+             </div>
+        {# <div class="item"><a href="index.html"><img src="images/Iron-Man-2-Image-1.jpg" alt="">
                 <h2>Iron Man 2</h2>
             </a></div>
         <div class="item"><a href="http://"><img src="images/Thor-Image-1.jpg" alt=""></a>
@@ -110,10 +114,10 @@
         <div class="item"><a href="http://"><img src="images/les_gardiens_de_la_galaxie_vol_3.webp" alt="">
                 <h2>Les Gardiens de la galaxie Vol. 3</h2>
             </a>
-        </div>
+        </div> #}
 
 
-    </div>
+
 
 
 

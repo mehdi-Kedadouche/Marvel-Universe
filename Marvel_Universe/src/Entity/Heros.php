@@ -22,8 +22,13 @@ class Heros
      */
     private $name;
 
-    /**
+     /**
      * @ORM\Column(type="string", length=255)
+     */
+    private $span;
+
+    /**
+     * @ORM\Column(type="text")
      */
     private $description;
 
@@ -33,9 +38,9 @@ class Heros
     private $OrigineName;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="string")
      */
-    private $DateCreation;
+    private $Creation;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -43,9 +48,22 @@ class Heros
     private $picture;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $powers;
+
+     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $classe;
+
+         /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $resume;
+
+
+    
 
     public function getId(): ?int
     {
@@ -88,14 +106,14 @@ class Heros
         return $this;
     }
 
-    public function getDateCreation(): ?\DateTimeInterface
+    public function getCreation(): ?string
     {
-        return $this->DateCreation;
+        return $this->Creation;
     }
 
-    public function setDateCreation(\DateTimeInterface $DateCreation): self
+    public function setCreation(string $Creation): self
     {
-        $this->DateCreation = $DateCreation;
+        $this->Creation = $Creation;
 
         return $this;
     }
@@ -120,6 +138,46 @@ class Heros
     public function setPowers(string $powers): self
     {
         $this->powers = $powers;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of classe
+     */ 
+    public function getClasse()
+    {
+        return $this->classe;
+    }
+
+    /**
+     * Set the value of classe
+     *
+     * @return  self
+     */ 
+    public function setClasse($classe)
+    {
+        $this->classe = $classe;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of resume
+     */ 
+    public function getResume()
+    {
+        return $this->resume;
+    }
+
+    /**
+     * Set the value of resume
+     *
+     * @return  self
+     */ 
+    public function setResume($resume)
+    {
+        $this->resume = $resume;
 
         return $this;
     }

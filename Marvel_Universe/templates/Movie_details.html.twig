@@ -1,0 +1,22 @@
+{% include 'layouts/header.html.twig' %}
+
+ {% if movie %}
+    <div class="hero-details">
+    
+        <img src="{{ asset('images/' ~ movie.poster) }}" alt="{{ movie.title }}">
+        <h1 class="">{{ movie.title }}</h1>
+          <h2>Réalisateur : {{ movie.director }}</h2>
+         {# <h2>Date de sortie : {{ movie.releaseDate }}</h2> #}
+        <h2>Durée : {{ movie.duration }} min</h2>
+        <h2>Genre : {{ movie.genre }}</h2>
+        <p class="description">{{ movie.description }}</p>
+        <h2>Casting : {{ movie.cast }}</h2>
+        
+   
+      {% if movie.trailer %}
+            <iframe width="560" height="315" style src="{{ movie.trailer }}" title="{{ movie.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% endif %}
+    </div>
+{% endif %} 
+
+{% include 'layouts/footer.html.twig' %}

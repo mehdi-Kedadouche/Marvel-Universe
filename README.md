@@ -1,6 +1,6 @@
 # Marvel-Universe 💥
 ![mobile (2)](https://github.com/mehdi-Kedadouche/Marvel-Universe/assets/124891639/31dc6b2e-d265-4f13-9250-33d25ef7abe7)
-)
+
 
 Marvel-Universe is a website dedicated to the Marvel superhero universe, showcasing heroes, movies, and comics.
 
